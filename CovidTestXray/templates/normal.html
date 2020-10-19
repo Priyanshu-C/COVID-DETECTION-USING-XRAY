@@ -1,7 +1,10 @@
-{% extends 'base.html' %}
-
-
+{% extends "base.html" %}
 {% block content %}
-    <h1>NORMAL</h1>
+    <div class="login-dark" style="background: url( {{ url_for('static', filename='/img/star-sky.jpg') }} );">  
+        <form method="POST" enctype=multipart/form-data>
+            <h1>YOU ARE NORMAL</h1>    
+        </form>
+    </div>
 {% endblock content %}
     
+

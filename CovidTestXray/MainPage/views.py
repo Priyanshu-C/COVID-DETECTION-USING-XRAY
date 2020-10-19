@@ -14,21 +14,20 @@ def ModelTest():
     MODEL = load_model("VGGModel")
     if request.method == "POST":
 
-        X = request.files('imagefile')
-        return render_template('covid.html',X=X)
+        data = request.files['imagefile']
+        data.save("img")
 
-        # image = request.files('imagefile')
-        # image = cv2.imread(image)
-        # image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        # image = image/255.0
-        # image = cv2.resize(image, (512, 512))
-        # image = image.reshape(-1, 512, 512, 3)
+        image = cv2.imread('img')
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image = image/255.0
+        image = cv2.resize(image, (512, 512))
+        image = image.reshape(-1, 512, 512, 3)
 
-        # TAG = ["COVID","NORMAL"]
-        # X = MODEL.predict(image)
-        # if TAG[np.argmax(X)] == "COVID":
-        #     return render_template('covid.html')
-        # else:
-        #     return render_template('normal.html')
+        TAG = ["COVID","NORMAL"]
+        X = MODEL.predict(image)
+        if TAG[np.argmax(X)] == "COVID":
+            return render_template('covid.html')
+        else:
+            return render_template('normal.html')
     
 
