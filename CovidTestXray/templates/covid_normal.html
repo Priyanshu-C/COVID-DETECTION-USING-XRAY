@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="login-dark" style="background: url( {{ url_for('static', filename='/img/star-sky.jpg') }} );">  
+    <form method="post" style="height: 581px;background: rgb(2,2,2);">
+        <h2 class="sr-only">Login Form</h2>
+        <h1 style="border-color: rgb(206,21,21);color: rgb(241,253,255);">YOU ARE......</h1>
+        <div class="illustration"></div>
+        
+        {% if X==0 %}
+        <div class="form-group" style="width: 255px;"><img src="{{ url_for('static', filename='/img/COVIDP.png') }}" style="width: 307px;padding: 0px;margin-left: -33px;"></div><a data-bs-hover-animate="pulse" class="forgot" href="#">Don't Worry, It's gonna be alright!</a></form>
+        {% else %}
+        <div class="form-group" style="width: 255px;"><img src="{{ url_for('static', filename='/img/COVIDN.png') }}" style="width: 307px;padding: 0px;margin-left: -33px;"></div><a data-bs-hover-animate="pulse" class="forgot" href="#">Don't Worry, It's gonna be alright!</a></form>
+        {% endif %}
+            
+        </div>
+{% endblock content %}
+    
+

@@ -11,8 +11,15 @@ def index():
 
 @core.route('/', methods = ["POST"])
 def ModelTest():
-    MODEL = load_model("VGGModel")
+    
     if request.method == "POST":
+        selectmodel = request.form.get("selectmodel")
+        if selectmodel=="VGG19":
+            MODEL = load_model("VGGModel")
+            imgsize = 512
+        elif selectmodel=="VGG16":
+            MODEL = load_model("model_vgg16.h5")
+            imgsize = 224
 
         data = request.files['imagefile']
         data.save("img")
@@ -20,14 +27,12 @@ def ModelTest():
         image = cv2.imread('img')
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         image = image/255.0
-        image = cv2.resize(image, (512, 512))
-        image = image.reshape(-1, 512, 512, 3)
+        image = cv2.resize(image, (imgsize, imgsize))
+        image = image.reshape(-1, imgsize, imgsize, 3)
 
         TAG = ["COVID","NORMAL"]
         X = MODEL.predict(image)
-        if TAG[np.argmax(X)] == "COVID":
-            return render_template('covid.html')
-        else:
-            return render_template('normal.html')
+        X = np.argmax(X)
+        return render_template('covid_normal.html',X = X,selectmodel=selectmodel)
     
 
