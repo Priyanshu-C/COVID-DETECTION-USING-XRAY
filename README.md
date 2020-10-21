@@ -7,70 +7,57 @@
 
 
 
-![Farmers Market Finder Demo](README-ASSET/app.gif.gif)
-One to two paragraph statement about your product and what it does.
-
+![DEMO APP](README-ASSET/app.gif.gif)
+<br>
 ![](header.png)
 
-## Installation
+- 	This app has mutiple models you can predict the xray upon, we trained a model on over 9 CNN models with different layers setup along with pretrained model like VGG16 and VGG19.
+- 	OpenCV has been used to scale and resize the images to the required input size.
+- 	Deployment has been done on flask with very basic route and 2 html pages.
+
+
+
+## How to run?
 
 OS X & Linux:
 
 ```sh
-npm install my-crazy-module --save
+python app.py
 ```
 
 Windows:
 
 ```sh
-edit autoexec.bat
+python app.py
 ```
 
-## Usage example
+## Usage
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
+- This is an experimental project to better our understanding of the ImageProcessing using Neural Network.
+- This obviously can't be deployed in real-time, because even if we have reached the accuracy of over 98% but the dataset used to train was not large and the metadata classified the Covid and Pneumonia cases as the same.
 
 ## Development setup
 
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
+I have attached requirements.txt in the repository for better support, but majorly we the libraries involved are.
 
 ```sh
-make install
-npm test
+Flask 1.1.2
+Keras 2.4.3
+opencv-python 4.4.0.44
+tensorflow 2.3.1
+tensorboard 2.3.0
 ```
 
-## Release History
+## EDA
 
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
+
 
 ## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+Priyanshu Chauhan –– priyanshuc.info@gmail.com
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+[https://github.com/Priyanshu-C/COVID-DETECTION-USING-XRAY](https://github.com/Priyanshu-C/COVID-DETECTION-USING-XRAY)
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
-
-## Contributing
-
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
 
 <!-- Markdown link & img dfn's -->
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
