@@ -7,7 +7,7 @@
 
 
 
-![DEMO APP](README-ASSET/app.gif)
+<img src="README-ASSET/app.gif" width="350" height="450" />
 <br>
 ![](header.png)
 
