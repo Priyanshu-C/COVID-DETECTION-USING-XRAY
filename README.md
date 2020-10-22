@@ -47,8 +47,25 @@ tensorflow 2.3.1
 tensorboard 2.3.0
 ```
 
-## EDA
+## Model Trained to get the best number of layer setup for the project 
 
+<img src="README-ASSET/MODELS-TEST.jpg"/>
+
+## EDA
+- 	Age Wise Pie-Chart
+<img src="README-ASSET/EDA/Age_Pie_Chart.PNG"/>
+
+- 	Correlation Heatmap
+<img src="README-ASSET/EDA/Correlation_Amongst_Variable.PNG"/>
+
+- 	Table for all diseases
+<img src="README-ASSET/EDA/Histogram_All_Disease_Table.PNG"/>
+
+- 	Histogram for all diseases 
+<img src="README-ASSET/EDA/Histogram_All_Disease.PNG"/>
+
+- 	X-Ray Views Distribution
+<img src="README-ASSET/EDA/View_Pie_Chart.PNG"/>
 
 
 ## Meta
