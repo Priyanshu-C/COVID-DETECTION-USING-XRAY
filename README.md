@@ -7,9 +7,8 @@
 
 
 
-![DEMO APP](README-ASSET/app.gif.gif)
+<img src="README-ASSET/app.gif" width="350" height="450" />
 <br>
-![](header.png)
 
 - 	This app has mutiple models you can predict the xray upon, we trained a model on over 9 CNN models with different layers setup along with pretrained model like VGG16 and VGG19.
 - 	OpenCV has been used to scale and resize the images to the required input size.
