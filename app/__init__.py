@@ -14,4 +14,3 @@ from CovidTestXray.MainPage.views import core
 
 # Register the apps
 app.register_blueprint(core)
-
