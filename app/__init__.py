@@ -10,7 +10,7 @@ app.config['SECRET_KEY'] = 'mysecret'
 
 # Import these at the top if you want
 # We've imported them here for easy reference
-from CovidTestXray.MainPage.views import core
+from app.MainPage.views import core
 
 # Register the apps
 app.register_blueprint(core)
