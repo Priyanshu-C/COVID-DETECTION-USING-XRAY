@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe"
+    "python.pythonPath": "c:\\MyProjects\\COVID-TEST-XRAY\\COVID-DETECTION-USING-XRAY\\covid-xray\\Scripts\\python.exe",
+    "git.ignoreLimitWarning": true
 }
