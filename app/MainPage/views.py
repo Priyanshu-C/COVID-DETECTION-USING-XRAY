@@ -4,7 +4,6 @@ from cv2 import cv2
 import numpy as np
 import os
 core = Blueprint('core',__name__)
-
 @core.route('/')
 def index():       
     return render_template('index.html')                     
@@ -15,10 +14,10 @@ def ModelTest():
     if request.method == "POST":
         selectmodel = request.form.get("selectmodel")
         if selectmodel=="VGG19":
-            MODEL = load_model("VGGModel")
+            MODEL = load_model("./VGGModel")
             imgsize = 512
         elif selectmodel=="VGG16":
-            MODEL = load_model("model_vgg16.h5")
+            MODEL = load_model("./model_vgg16.h5")
             imgsize = 224
 
         data = request.files['imagefile']
